@@ -35,3 +35,8 @@ for row_doc2 in wsa2.iter_rows(min_row=2, min_col=2, max_col=3, max_row=889):
 
 print(len(arr_comparacion1))
 print(len(arr_comparacion2))
+## Borrar los siguientes dos # (uno por uno) para poder vizualizar
+## los arreglos de ambos archivos purgados
+
+#print(arr_comparacion1)
+#print(arr_comparacion2)
