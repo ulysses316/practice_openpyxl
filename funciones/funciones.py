@@ -1,11 +1,13 @@
 import openpyxl
 
 ## comparacion de color en la casilla
-"""
-def compara_naranja(casilla):
 
-def compara_amarilla(casilla):
-"""
+#casilla.fill.start_color.index
+# AZUl = 10
+# Naranja = 12
+# Amarillo = FFFFFF00
+# Rojo 15
+
 def normalize(s):
     replacements = (
         ("á", "a"),
@@ -31,20 +33,32 @@ def rango(ws,r_initial,r_final):
     cell_range = ws[r_initial:r_final]
     return cell_range
 
-def delete_format(cell_range):
-    for cell in cell_range:
-        cell[0].value = cell[0].value.upper()
-        cell[0].value = normalize(cell[0].value)
-        cell[0].value = cell[0].value.replace(' ','')
-        cell[0].value = cell[0].value.replace('1','')
-        cell[0].value = cell[0].value.replace('2','')
-        cell[0].value = cell[0].value.replace('3','')
-        cell[0].value = cell[0].value.replace('4','')
-        cell[0].value = cell[0].value.replace('5','')
-        cell[0].value = cell[0].value.replace('6','')
-        cell[0].value = cell[0].value.replace('7','')
-        cell[0].value = cell[0].value.replace('8','')
-        cell[0].value = cell[0].value.replace('9','')
-        cell[0].value = cell[0].value.replace('0','')
-        cell[0].value = cell[0].value.replace('.','')
-    return cell_range
+def delete_format(cell_item):
+    cell_item.value = cell_item.value.upper()
+    cell_item.value = normalize(cell_item.value)
+    cell_item.value = cell_item.value.replace(' ','')
+    cell_item.value = cell_item.value.replace('1','')
+    cell_item.value = cell_item.value.replace('2','')
+    cell_item.value = cell_item.value.replace('3','')
+    cell_item.value = cell_item.value.replace('4','')
+    cell_item.value = cell_item.value.replace('5','')
+    cell_item.value = cell_item.value.replace('6','')
+    cell_item.value = cell_item.value.replace('7','')
+    cell_item.value = cell_item.value.replace('8','')
+    cell_item.value = cell_item.value.replace('9','')
+    cell_item.value = cell_item.value.replace('0','')
+    cell_item.value = cell_item.value.replace('.','')
+    return cell_item
+
+"""def primer_archivo():
+    arr_comparacion = []
+    for row_doc1 in wsa1.iter_rows(min_row=4, min_col=19, max_col=20, max_row=320):
+        cambio = row_doc1[0]
+        if cambio.fill.start_color.index == 9:
+            cambio = delete_format(cambio)
+            cambio = cambio.value.splitlines()
+            if type(cambio) == list:
+                for i in cambio:
+                    arr_comparacion1.append(i)
+            else:
+                arr_comparacion1.append(cambio.value)"""

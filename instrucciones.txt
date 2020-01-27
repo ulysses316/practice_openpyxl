@@ -1,0 +1,7 @@
+1° Asegurarte de que tienes instalado python 3 con el siguiente comando
+desde la terminal: python3 --version
+2° Colocar tu terminal en el directorio en el que tenemos los archivos
+3° Poner el siguiente comando python -m venv venv
+4° Inmediatamente despues poner: source venv/bin/activate
+5° Instalar las librerias dependencias con el siguiente comando: pip install -r requirements.txt
+6° Correr el archivo lista.py con el comando python3 lista.py
